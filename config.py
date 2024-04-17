@@ -1,4 +1,3 @@
-# 注释
 DATA_HEIGHT = 416
 DATA_WIDTH = 416
 
