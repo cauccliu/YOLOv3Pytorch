@@ -59,7 +59,7 @@ if __name__ =='__main__':
             print(epoch,loss.item())
             summary_writer.add_scalar('train_loss',loss, index)
             index+=1
-        
-        torch.save(net.state_dict(), f'params/net{epoch}.pt')
-        print(f'{epoch}保存成功')
+        if epoch%100 == 0:
+            torch.save(net.state_dict(), f'params/net{epoch}.pt')
+            print(f'{epoch}保存成功')
         epoch+=1
